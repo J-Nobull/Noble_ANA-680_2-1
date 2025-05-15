@@ -1,6 +1,9 @@
 {
-  "name": "Noble ANA680 Week 2 App",
+  "name": "Noble ANA 680 App",
   "repository": "https://github.com/J-Nobull/Noble_ANA-680_2-1",
+  "scripts": {
+    "postdeploy": "echo 'Deployment complete.'"
+  },
   "environments": {
     "test": {
       "scripts": {
@@ -8,26 +11,8 @@
       }
     },
     "review": {
-      "env": {
-        "DEBUG": "True"
-      }
-    },
-    "staging": {
-      "addons": [],
-      "env": {
-        "DEBUG": "False"
-      },
       "scripts": {
-        "postdeploy": "echo 'Staging postdeploy complete'"
-      }
-    },
-    "production": {
-      "addons": [],
-      "env": {
-        "DEBUG": "False"
-      },
-      "scripts": {
-        "postdeploy": "echo 'Production postdeploy complete'"
+        "postdeploy": "echo 'Review app deployed.'"
       }
     }
   }
