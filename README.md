@@ -28,13 +28,12 @@ Heroku, and CI/CD is managed via GitHub Actions.
 ```
 Noble_ANA-680_2-1/
 │
-├── app.py                # Flask application
+├── 680_2_1.py            # Flask application
 ├── model.pkl             # Trained ML model (pickled)
 ├── requirements.txt      # Python dependencies
 ├── Procfile              # For Heroku deployment
 ├── py-app.yml            # GitHub Actions workflow file
 ├── templates/index       # Web form for user input
-├── static                # (Optional) CSS/JS assets
 └── Breast_Cancer_Data.csv
 ```
 
