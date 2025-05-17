@@ -1,4 +1,8 @@
 {
+  "name": "Noble ANA 680 App",
+  "scripts": {
+    "test": "pytest"
+  },
   "environments": {
     "test": {
       "scripts": {
