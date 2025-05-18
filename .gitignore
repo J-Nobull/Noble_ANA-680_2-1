@@ -1,2 +1,6 @@
-myvenv
 __pycache__/
+*.pyc
+*.pkl
+.env
+venv/
+.ipynb_checkpoints/
