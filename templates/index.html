@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Breast Cancer Predictor</title>
+</head>
+<body>
+    <h2>Enter Feature Values</h2>
+    <form action="/predict" method="post">
+        {% for feature in features %}
+        <label>{{ feature }}</label><br>
+        <input type="text" name="{{ feature }}"><br>
+        {% endfor %}
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
