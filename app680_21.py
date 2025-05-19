@@ -31,9 +31,19 @@ def predict():
         values = [float(request.form[feature]) for feature in features]
         values_scaled = scaler.transform([values])
         prediction = model.predict(values_scaled)[0]
-        return f"The prediction is: {prediction}"
+
+        # Custom message based on prediction
+        if prediction == 0:
+            result = "Low chance of diagnosis"
+        elif prediction == 1:
+            result = "Likely diagnosis – further testing recommended"
+        else:
+            result = f"Unexpected result: {prediction}"
+
+        return f"The prediction is: {result}"
     except Exception as e:
         return str(e)
+
 
 if __name__ == '__main__':
     app.run(debug=True)
