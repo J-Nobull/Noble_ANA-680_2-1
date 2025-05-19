@@ -1,15 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Breast Cancer Predictor</title>
+    <title>Cancer Prediction</title>
 </head>
 <body>
     <h2>Enter Feature Values</h2>
     <form action="/predict" method="post">
-        {% for feature in features %}
-        <label>{{ feature }}</label><br>
-        <input type="text" name="{{ feature }}"><br>
-        {% endfor %}
+        <label>Clump_thickness</label><br>
+        <input type="text" name="Clump_thickness" required><br>
+
+        <label>Uniformity_of_cell_size</label><br>
+        <input type="text" name="Uniformity_of_cell_size" required><br>
+
+        <label>Uniformity_of_cell_shape</label><br>
+        <input type="text" name="Uniformity_of_cell_shape" required><br>
+
+        <label>Marginal_adhesion</label><br>
+        <input type="text" name="Marginal_adhesion" required><br>
+
+        <label>Single_epithelial_cell_size</label><br>
+        <input type="text" name="Single_epithelial_cell_size" required><br>
+
+        <label>Bare_nuclei</label><br>
+        <input type="text" name="Bare_nuclei" required><br>
+
+        <label>Bland_chromatin</label><br>
+        <input type="text" name="Bland_chromatin" required><br>
+
+        <label>Normal_nucleoli</label><br>
+        <input type="text" name="Normal_nucleoli" required><br>
+
+        <label>Mitoses</label><br>
+        <input type="text" name="Mitoses" required><br><br>
+
         <input type="submit" value="Predict">
     </form>
 </body>
