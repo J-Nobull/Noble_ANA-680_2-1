@@ -2,38 +2,77 @@
 <html>
 <head>
     <title>Cancer Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background-color: #f2f2f2;
+        }
+        .form-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 400px;
+        }
+        input[type="text"] {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 8px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        h2 {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <h2>Enter Feature Values</h2>
-    <form action="/predict" method="post">
-        <label>Clump_thickness</label><br>
-        <input type="text" name="Clump_thickness" required><br>
+    <div class="form-container">
+        <h2>Enter Feature Values</h2>
+        <form action="/predict" method="post">
+            <label>Clump Thickness</label><br>
+            <input type="text" name="Clump_thickness" required><br>
 
-        <label>Uniformity_of_cell_size</label><br>
-        <input type="text" name="Uniformity_of_cell_size" required><br>
+            <label>Cell SIZE Uniformity</label><br>
+            <input type="text" name="Uniformity_of_cell_size" required><br>
 
-        <label>Uniformity_of_cell_shape</label><br>
-        <input type="text" name="Uniformity_of_cell_shape" required><br>
+            <label>Cell SHAPE Uniformity</label><br>
+            <input type="text" name="Uniformity_of_cell_shape" required><br>
 
-        <label>Marginal_adhesion</label><br>
-        <input type="text" name="Marginal_adhesion" required><br>
+            <label>Marginal Adhesion</label><br>
+            <input type="text" name="Marginal_adhesion" required><br>
 
-        <label>Single_epithelial_cell_size</label><br>
-        <input type="text" name="Single_epithelial_cell_size" required><br>
+            <label>Single Epithelial CELL SIZE</label><br>
+            <input type="text" name="Single_epithelial_cell_size" required><br>
 
-        <label>Bare_nuclei</label><br>
-        <input type="text" name="Bare_nuclei" required><br>
+            <label>Bare Nuclei</label><br>
+            <input type="text" name="Bare_nuclei" required><br>
 
-        <label>Bland_chromatin</label><br>
-        <input type="text" name="Bland_chromatin" required><br>
+            <label>Bland Chromatin</label><br>
+            <input type="text" name="Bland_chromatin" required><br>
 
-        <label>Normal_nucleoli</label><br>
-        <input type="text" name="Normal_nucleoli" required><br>
+            <label>Normal Nucleoli</label><br>
+            <input type="text" name="Normal_nucleoli" required><br>
 
-        <label>Mitoses</label><br>
-        <input type="text" name="Mitoses" required><br><br>
+            <label>Mitoses</label><br>
+            <input type="text" name="Mitoses" required><br><br>
 
-        <input type="submit" value="Predict">
-    </form>
+            <input type="submit" value="Predict">
+        </form>
+    </div>
 </body>
 </html>
