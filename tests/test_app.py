@@ -1,16 +1,16 @@
-import unittest
+import pytest
 from app680_21 import app
 
-class AppTestCase(unittest.TestCase):
-    def setUp(self):
-        self.client = app.test_client()
-        self.client.testing = True
+@pytest.fixture
+def client():
+    with app.test_client() as client:
+        yield client
 
-    def test_homepage(self):
-        response = self.client.get('/')
-        self.assertEqual(response.status_code, 200)
-        # Optionally check for expected content:
-        # self.assertIn(b"some expected text", response.data)
-
+def test_homepage(client):
+    response = client.get('/')
+    assert response.status_code == 200
+    # Optionally check content:
+    # assert b"expected text" in response.data
 if __name__ == "__main__":
-    unittest.main()
+    pytest.main()
+# Add more tests for your other routes below
