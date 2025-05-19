@@ -1,4 +1,5 @@
- "name": "Noble ANA 680 App",
+{
+  "name": "Noble ANA 680 App",
   "repository": "https://github.com/J-Nobull/Noble_ANA-680_2-1",
   "scripts": {
     "postdeploy": "echo 'Deployed successfully'"
@@ -15,3 +16,4 @@
       }
     }
   }
+}
