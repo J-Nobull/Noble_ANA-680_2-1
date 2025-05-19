@@ -9,7 +9,17 @@ with open("cancer_model.pkl", "rb") as f:
     scaler, model = pickle.load(f)
 
 # Feature list
-features = ["mean_radius", "mean_texture", "mean_perimeter", "mean_area", "mean_smoothness"]  # Adjust based on dataset
+features = [
+    "Clump_thickness",
+    "Uniformity_of_cell_size",
+    "Uniformity_of_cell_shape",
+    "Marginal_adhesion",
+    "Single_epithelial_cell_size",
+    "Bare_nuclei",
+    "Bland_chromatin",
+    "Normal_nucleoli",
+    "Mitoses"
+]
 
 @app.route('/')
 def home():
